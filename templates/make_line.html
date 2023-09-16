@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        #tutorial {
+            border: 1px solid black;
+            height: 480px;
+            width: 720px;
+        }
+    </style>
+        <script src="{% static 'js/vendor/jquery-1.12.4.min.js' %}"></script>
+</head>
+
+<body>
+    <canvas id="tutorial" width="500" height="300">
+        你的浏览器不支持 canvas，请升级你的浏览器。
+    </canvas>
+
+</body>
+
+<script type="text/javascript">
+    function f() {
+        var a;
+    $.ajax({
+        type: "get",
+        url: "http://127.0.0.1:8000/ins/data",
+        async: false,
+        success: function (result) {
+            if (result['code'] == 200) {
+                a =result['data']['zero_or_one'];
+                console.log(a);
+            }
+        }
+    });
+    return a;
+    }
+    </script>
+    <script>
+    {#console.log(a);#}
+    function draw(a) {
+        var canvas = document.getElementById('tutorial');
+        if (!canvas.getContext) return;
+        var ctx = canvas.getContext("2d");
+        if (a == 0) {
+
+            ctx.fillRect(100, 0, 100, 50);
+            ctx.fillRect(280, 0, 100, 50);
+            ctx.fillRect(0, 30, 50, 100);
+            ctx.fillRect(0, 150, 50, 100);
+            ctx.fillRect(280, 250, 100, 50);
+            ctx.fillRect(100, 250, 100, 50);
+            ctx.fillRect(450, 30, 50, 100);
+            ctx.fillRect(450, 150, 50, 100);
+            ctx.fillRect(100, 80, 50, 140);
+
+            ctx.fillRect(330, 80, 50, 140);
+        }
+        else {
+            ctx.fillRect(100, 0, 100, 50);
+            ctx.fillRect(280, 0, 100, 50);
+            ctx.fillRect(0, 30, 50, 100);
+            ctx.fillRect(0, 150, 50, 100);
+            ctx.fillRect(280, 250, 100, 50);
+            ctx.fillRect(100, 250, 100, 50);
+            ctx.fillRect(450, 30, 50, 100);
+            ctx.fillRect(450, 150, 50, 100);
+            ctx.fillRect(100, 80, 50, 140);
+            ctx.fillRect(330, 80, 50, 140);
+            ctx.fillStyle = "rgb(225,0,0)";
+            ctx.fillRect(400, 250, 30, 30);
+            function drawup(x, y, length) {
+                var len = 0;
+                function upline() {
+                    var canvas = document.getElementById('tutorial');
+                    if (!canvas.getContext) return;
+                    var ctx = canvas.getContext("2d");
+                    if (len <= length) {
+                        ctx.moveTo(x, y);
+                        ctx.lineTo(x, --y);
+                        len++;
+                        ctx.strokeStyle = "rgba(0,255,0,1)";
+                        ctx.stroke();
+                    }
+                }
+                setInterval(upline, 3)
+            }
+
+            function drawright(x, y, length) {
+                var len = 0;
+                function rightline() {
+                    var canvas = document.getElementById('tutorial');
+                    if (!canvas.getContext) return;
+                    var ctx = canvas.getContext("2d");
+                    if (len <= length) {
+                        ctx.moveTo(x, y);
+                        ctx.lineTo(++x, y);
+                        len++;
+                        ctx.strokeStyle = "rgba(0,255,0,1)";
+                        ctx.stroke();
+                    }
+                }
+                setInterval(rightline, 3)
+            }
+
+            function drawdown(x, y, length) {
+                var len = 0;
+                function rightline() {
+                    var canvas = document.getElementById('tutorial');
+                    if (!canvas.getContext) return;
+                    var ctx = canvas.getContext("2d");
+                    if (len <= length) {
+                        ctx.moveTo(x, y);
+                        ctx.lineTo(x, ++y);
+                        len++;
+                        ctx.strokeStyle = "rgba(0,255,0,1)";
+                        ctx.stroke();
+                    }
+                }
+                setInterval(rightline, 3)
+            }
+
+            function drawlift(x, y, length) {
+                var len = 0;
+                function rightline() {
+                    var canvas = document.getElementById('tutorial');
+                    if (!canvas.getContext) return;
+                    var ctx = canvas.getContext("2d");
+                    if (len <= length) {
+                        ctx.moveTo(x, y);
+                        ctx.lineTo(--x, y);
+                        len++;
+                        ctx.strokeStyle = "rgba(0,255,0,1)";
+                        ctx.stroke();
+                    }
+                }
+                setInterval(rightline, 3)
+            }
+            // 左下
+            drawright(50, 200, 25);
+            drawdown(75, 200, 200);
+            drawup(125, 250, 10);
+            drawlift(125, 240, 50);
+
+            //左上
+            drawright(50, 85, 25);
+            drawup(75, 85, 90);
+            drawdown(150, 50, 15);
+            drawlift(150, 65, 75);
+            drawlift(100, 150, 25);
+            drawup(75, 150, 75);
+
+            //右上
+            drawdown(330, 50, 15);
+            drawright(330, 65, 90);
+            drawlift(450, 85, 30);
+            drawup(420, 85, 85);
+            drawright(380, 150, 40);
+            drawup(420, 150, 70);
+
+            //右下
+            drawlift(450, 200, 30);
+            drawup(420, 200, 60);
+
+            drawup(330, 250, 10);
+            drawlift(330, 240, 210);
+        }
+    }
+    var a=f();
+    console.log(a);
+    draw(a);
+
+</script>
+
+<script>
+    setTimeout(function () { location.reload() }, 7000)
+</script>
+
+</html>

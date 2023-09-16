@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="utf-8" />
+    <title>火灾救援路线</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+    <meta content="Coderthemes" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}">
+
+    <!-- Plugins css -->
+    <link href="{% static 'libs/flatpickr/flatpickr.min.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'libs/selectize/css/selectize.bootstrap3.css' %}" rel="stylesheet" type="text/css" />
+
+    <!-- App css -->
+    <link href="{% static 'css/config/modern/bootstrap.min.css' %}" rel="stylesheet" type="text/css"
+          id="bs-default-stylesheet" />
+    <link href="{% static 'css/config/modern/app.min.css' %} " rel="stylesheet" type="text/css" id="app-default-stylesheet" />
+
+    <link href="{% static 'css/config/modern/bootstrap-dark.min.css' %} " rel="stylesheet" type="text/css"
+          id="bs-dark-stylesheet" />
+    <link href="{% static 'css/config/modern/app-dark.min.css' %} " rel="stylesheet" type="text/css"
+          id="app-dark-stylesheet" />
+
+    <!-- icons -->
+    <link href="{% static 'css/icons.min.css' %} " rel="stylesheet" type="text/css" />
+    <style>
+        .row1 {}
+    </style>
+</head>
+
+<!-- body start -->
+
+<body class="loading" data-layout-mode="detached"
+    data-layout='{"mode": "light", "width": "fluid", "menuPosition": "fixed", "sidebar": { "color": "light", "size": "default", "showuser": true}, "topbar": {"color": "dark"}, "showRightSidebarOnPageLoad": true}'>
+    <div id="wrapper">
+
+        <!-- Topbar Start -->
+        <div class="navbar-custom">
+            <div class="container-fluid">
+                <ul class="list-unstyled topnav-menu float-end mb-0">
+                    <!-- 用户登录界面 -->
+                    <li class="dropdown notification-list topbar-dropdown">
+                        <a class="nav-link dropdown-toggle nav-user me-0 waves-effect waves-light"
+                            data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false"
+                            aria-expanded="false">
+                            <img src="{% static 'images/users/user-6.jpg' %} " alt="user-image" class="rounded-circle">
+                            <span class="pro-user-name ms-1">
+                                Stanley <i class="mdi mdi-chevron-down"></i>
+                            </span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end profile-dropdown ">
+                            <a href="{% url 'users:login_out' %}" class="dropdown-item notify-item">
+                                <i class="fe-log-out"></i>
+                                <span>退出账号</span>
+                            </a>
+
+                        </div>
+                    </li>
+                </ul>
+
+                <!-- LOGO -->
+                <div class="logo-box">
+                    <a href="/" class="logo logo-dark text-center">
+                        <span class="logo-sm">
+                            <img src="{% static 'images/logo-sm.png' %} " alt="" height="22">
+                            <!-- <span class="logo-lg-text-light">UBold</span> -->
+                        </span>
+                        <span class="logo-lg">
+                            <img src="{% static 'images/logo-dark.png' %} " alt="" height="20">
+                            <!-- <span class="logo-lg-text-light">U</span> -->
+                        </span>
+                    </a>
+
+                    <a href="/" class="logo logo-light text-center">
+                        <span class="logo-sm">
+                            <img src="{% static 'images/logo-sm.png' %}" alt="" height="22">
+                        </span>
+                        <span class="logo-lg">
+                            <img src="{% static 'images/logo-light.png' %}" alt="" height="20">
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="left-side-menu">
+
+            <div class="h-100" data-simplebar>
+                <div id="sidebar-menu">
+
+                    <ul id="side-menu">
+
+                        <li>
+                            <a href="#sidebarDashboards" data-bs-toggle="collapse">
+                                <i data-feather="airplay"></i>
+                                <span> 路线规划 </span>
+                            </a>
+                            <div class="collapse" id="sidebarDashboards">
+                                <ul class="nav-second-level">
+                                    <li>
+                                        <a href="http://127.0.0.1:8000/users/life">火灾逃生路线</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://127.0.0.1:8000/users/save">火灾救援路线</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="content-page">
+            <div class="content">
+
+                <!-- Start Content-->
+                <div class="container-fluid">
+
+                    <!-- start page title -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box">
+                                <h4 class="page-title">火灾救援路线</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  title -->
+
+                    <div class="row" id="1">
+                        <iframe src="http://127.0.0.1:8000/users/line" frameborder="0" align="center" width="800" height="550"></iframe>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Vendor js -->
+    <script src="{% static 'js/vendor.min.js' %} "></script>
+
+    <!-- Plugins js-->
+    <script src="{% static 'libs/flatpickr/flatpickr.min.js' %} "></script>
+    <script src="{% static 'libs/apexcharts/apexcharts.min.j' %} "></script>
+
+    <script src="{% static 'libs/selectize/js/standalone/selectize.min.js' %}"></script>
+
+    <!-- Dashboar 1 init js-->
+    <script src="{% static 'js/pages/dashboard-1.init.js' %}"></script>
+
+    <!-- App js-->
+    <script src="{% static 'js/app.min.js' %}"></script>
+    <div style="display:none"><a href="http://www.bootstrapmb.com">bootstrapmb</a></div>
+</body>
+
+</html>

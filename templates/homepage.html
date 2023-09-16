@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>首页</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/favicon.png' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/widgets.css' %}">
+    <link rel="stylesheet" href="{% static 'css/color.css' %}">
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    <link rel="stylesheet" href="{% static 'login/demos.css' %}">
+    <link rel="stylesheet" href="{% static 'login/hystmodal.css' %}">
+    <script src="{% static 'js/vendor/jquery-1.12.4.min.js' %}"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+
+<body>
+    <div class="scroll-progress primary-bg"></div>
+    <div class="main-wrap">
+        <aside id="sidebar-wrapper" class="custom-scrollbar offcanvas-sidebar"><button class="off-canvas-close"></button></aside>
+        <header class="main-header header-style-1">
+            <div class="header-bottom header-sticky background-white text-center">
+                <div class="mobile_menu d-lg-none d-block"></div>
+                <div class="container">
+                    <div class="col-12">
+                        <div class="main-nav text-center d-none d-lg-block">
+                            <nav>
+                                <ul id="navigation" class="main-menu">
+                                    <li><a href="#">实时新闻</a></li>
+                                    <li><a href="#">产品更新</a></li>
+                                    <li data-hystmodal="#modalForms">
+                                        <a data-hystmodal="#modalForms">登录</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    </header>
+    <main class="position-relative pt-40 background12">
+        <div class="home-featured mb-50">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="featured-slider-1 border-radius-10">
+                            <div class="featured-slider-1-items">
+                                <div class="slider-single">
+                                    <div class="row no-gutters">
+                                        <div class="col-lg-6 col-md-12 order-lg-1 order-2 align-center-vertical">
+                                            <div class="slider-caption">
+                                                <h2 class="post-title"><a href="#">连烧七小时，高楼火灾殃及二十层，财产损失谁承担？</a></h2>
+                                                <p class="excerpt font-medium mt-25 mb-25">
+                                                    有专家认为，在不考虑放火罪的前提下，该起火灾事故的责任人可能构成失火罪。
+                                                    　　进入夏秋季火灾高发期，除了人身安全，如何防范可能出现的大额财产损失风险，也成为一个需要公众关心的问题。...</p>
+                                                <div class="entry-meta meta-2"><a class="float-left mr-10 author-img"
+                                                        href="author.html"><img src="{% static 'images/author.png' %}"
+                                                            alt=""></a><a href="author.html"><span
+                                                            class="author-name">新闻</span></a><br></div>
+                                            </div>
+                                        </div>
+                                        <div class="slider-img col-lg-6 order-lg-2 order-1 col-md-12">
+                                            <div class="img-hover-scale"><span class="top-right-icon background8"><i
+                                                        class="mdi mdi-favorite"></i></span><a href="single.html"><img
+                                                    src="{% static 'images/1.jpg' %}" alt="post-slider"></a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slider-single">
+                                    <div class="row no-gutters">
+                                        <div class="col-lg-6 col-md-12 order-lg-1 order-2  align-center-vertical">
+                                            <div class="slider-caption">
+                                                <div class="entry-meta meta-0 mb-25"><a href="category.html"><span
+                                                            class="post-in background2 color-white font-small">Lifestyle</span></a>
+                                                </div>
+                                                <h2 class="post-title"><a href="#">大连凯旋国际大厦起火！1800人被疏散</a></h2>
+                                                <p class="excerpt font-medium mt-25 mb-25">
+                                                    8月27日下午16时，位于大连市金普新区马路西山入口处的凯旋国际大厦失火，滚滚的浓烟将高层楼梯笼罩住，让人看了十分揪心，在火情爆发后，相关救援部门第一时间赶到现场救火，经过近7个小时的紧急救援工作，...
+                                                </p>
+                                                <div class="entry-meta meta-2"><a class="float-left mr-10 author-img"
+                                                        href="author.html"><img src="{% static 'images/author-2.png' %}"
+                                                            alt=""></a><a href="author.html"><span
+                                                            class="author-name">新闻</span></a><br>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="slider-img col-lg-6 order-lg-2 order-1 col-md-12">
+                                            <div class="img-hover-scale"><span class="top-right-icon background9"><i
+                                                        class="mdi mdi-grade"></i></span><a href="single.html"><img
+                                                    src="{% static 'images/2.jpg' %}" alt="post-slider"></a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="arrow-cover"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="widgets-post-carausel-1 mb-40">
+            <div class="container">
+                <div class="post-carausel-1 border-radius-10 bg-white">
+                    <div class="row no-gutters">
+                        <div class="col col-1-5 background6 editor-picked-left d-none d-lg-block">
+                            <div class="editor-picked">
+                                <h4>最近更新</h4>
+                                <p class="font-medium color-grey mt-20 mb-30">近期我们对我们的项目进行的更新</p>
+                            </div>
+                        </div>
+                        <div class="col col-4-5 col-md-12">
+                            <div class="post-carausel-1-items row">
+                                <div class="slider-single col">
+                                    <h6 class="post-title pr-5 pl-5 mb-10 text-limit-2-row"><a
+                                            href="single.html">TSIM800A是一款两频GSM/GPRS模块,为SMT封装。其性能稳定</a></h6>
+                                    <div class="img-hover-scale border-radius-5 hover-box-shadow">
+                                        <span class="top-right-icon background2">
+                                            <i class="mdi mdi-audiotrack"></i>
+                                        </span>
+                                        <a href="single.html"><img class="border-radius-5" src="{% static 'images/sim800a.JPG' %}" alt="post-slider"></a>
+                                    </div>
+                                </div>
+                                <!--end slider single-->
+                                <div class="slider-single col">
+                                    <h6 class="post-title pr-5 pl-5 mb-10 text-limit-2-row"><a
+                                            href="single.html">51单片机性能优良，设备稳定</a></h6>
+                                    <div class="img-hover-scale border-radius-5 hover-box-shadow">
+                                        <a href="single.html"><img class="border-radius-5" src="{% static 'images/51.jpg' %}"
+                                                alt="post-slider"></a>
+                                    </div>
+                                </div>
+                                <!--end slider single-->
+                                <div class="slider-single col">
+                                    <h6 class="post-title pr-5 pl-5 mb-10 text-limit-2-row"><a
+                                            href="single.html">arduino易跨平台，扩展性强</a></h6>
+                                    <div class="img-hover-scale border-radius-5 hover-box-shadow">
+                                        <span class="top-right-icon background10">
+                                            <i class="mdi mdi-camera-alt"></i>
+                                        </span>
+                                        <a href="single.html">
+                                            <img class="border-radius-5" src="{% static 'mages/arduino.JPG' %}"
+                                                alt="post-slider">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-area fix pt-50 background11">
+            <div class="container">
+                <div class="row d-flex justify-content-between">
+                    <div class="col-lg-3 col-md-6 mb-lg-0 mb-30">
+                        <div class="sidebar-widget widget-latest-posts mb-30">
+                            <div class="widget-header position-relative mb-30">
+                                <h5 class="widget-title mt-5 mb-30 color-white">World</h5>
+                                <div class="letter-background">W</div>
+                            </div>
+                            <div class="post-block-list post-module-1 post-module-5">
+                                <ul class="list-post">
+                                    <li class="mb-30">
+                                        <div class="d-flex">
+                                            <div class="post-thumb d-flex mr-15 border-radius-5 img-hover-scale"><a
+                                                    class="color-white" href="single.html"><img
+                                                        src="" alt=""></a></div>
+                                            <div class="post-content media-body">
+                                                <h6 class="post-title mb-10 text-limit-2-row"><a class="color-white"
+                                                        href="single.html">Traveling Tends to Magnify All Human
+                                                        Emotions</a></h6>
+                                                <div class="entry-meta meta-1 font-x-small color-grey"><span
+                                                        class="post-on">25 April</span><span
+                                                        class="hit-count has-dot">26k Views</span></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="mb-30">
+                                        <div class="d-flex">
+                                            <div class="post-thumb d-flex mr-15 border-radius-5 img-hover-scale"><a
+                                                    class="color-white" href="single.html"><img
+                                                        src="" alt=""></a></div>
+                                            <div class="post-content media-body">
+                                                <h6 class="post-title mb-10 text-limit-2-row"><a class="color-white"
+                                                        href="single.html">The Luxury Of Traveling With Yacht</a>
+                                                </h6>
+                                                <div class="entry-meta meta-1 font-x-small color-grey mt-10"><span
+                                                        class="post-on">25 April</span><span
+                                                        class="hit-count has-dot">37k Views</span></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="mb-30">
+                                        <div class="d-flex">
+                                            <div class="post-thumb d-flex mr-15 border-radius-5 img-hover-scale"><a
+                                                    class="color-white" href="single.html"><img
+                                                        src="" alt=""></a></div>
+                                            <div class="post-content media-body">
+                                                <h6 class="post-title mb-10 text-limit-2-row"><a class="color-white"
+                                                        href="#">Last Minute Festive Packages From
+                                                        Superbreak</a></h6>
+                                                <div class="entry-meta meta-1 font-x-small color-grey mt-10"><span
+                                                        class="post-on">25 April</span><span
+                                                        class="hit-count has-dot">54k Views</span></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="sidebar-widget widget_categories mb-30">
+                            <div class="widget-header position-relative mb-30">
+                                <h5 class="widget-title mt-5 mb-30 color-white">Hot Topics</h5>
+                                <div class="letter-background">H</div>
+                            </div>
+                            <div class="post-block-list post-module-1 post-module-5">
+                                <ul class="float-left mr-30 font-medium">
+                                    <li class="cat-item cat-item-2"><a href="#">Global Economy</a></li>
+                                    <li class="cat-item cat-item-3"><a href="#">Environment</a></li>
+                                    <li class="cat-item cat-item-4"><a href="#">Religion</a></li>
+                                    <li class="cat-item cat-item-5"><a href="#">Fashion</a></li>
+                                    <li class="cat-item cat-item-6"><a href="#">Terrorism</a></li>
+                                    <li class="cat-item cat-item-7"><a href="#">Conflicts</a></li>
+                                    <li class="cat-item cat-item-2"><a href="#">Scandals</a></li>
+                                    <li class="cat-item cat-item-2"><a href="#">Executive</a></li>
+                                    <li class="cat-item cat-item-2"><a href="#">Foreign policy</a></li>
+                                </ul>
+                                <ul class="float-left font-medium">
+                                    <li class="cat-item cat-item-2"><a href="#">Healthy Living</a></li>
+                                    <li class="cat-item cat-item-3"><a href="#">Medical Research</a></li>
+                                    <li class="cat-item cat-item-4"><a href="#">Children’s Health</a></li>
+                                    <li class="cat-item cat-item-5"><a href="#">Around the World</a></li>
+                                    <li class="cat-item cat-item-6"><a href="#">Ad Choices</a></li>
+                                    <li class="cat-item cat-item-7"><a href="#">Mental Health</a></li>
+                                    <li class="cat-item cat-item-2"><a href="#">Media Relations</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom-area background11">
+            <div class="container">
+                <div class="footer-border pt-30 pb-30">
+                    <div class="row d-flex align-items-center justify-content-between">
+                        <div class="col-lg-6">
+                            <div class="footer-copy-right">
+                                <p class="font-medium">© 2020, UltraNews | All rights reserved | Design by <a
+                                        href="http://www.bootstrapmb.com/" target="_blank">AliThemes</a></p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="footer-menu float-lg-right mt-lg-0 mt-3">
+                                <ul class="font-medium">
+                                    <li><a href="#">Terms of use</a></li>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End-->
+    </footer>
+    <!-- 登录界面 -->
+    <div class="hystmodal hystmodal--simple" id="modalForms" aria-hidden="true">
+        <div class="hystmodal__wrap">
+            <div class="hystmodal__window hystmodal__window--form" role="dialog" aria-modal="true">
+                <button class="hystmodal__close" data-hystclose>Закрыть</button>
+                <div class="hystmodal__styled">
+                    <div class="loginblock__h1">账号登录</div>
+{#                    <form action="#" method="post">#}
+                        <div class="formitem">
+                            <input type="text" name="username" id="username" placeholder="账号" value="">
+                        </div>
+                        <div class="formitem">
+                            <input type="password" name="password" id="password" placeholder="密码" value="">
+                        </div>
+                        <div class="loginblock__bottom flexi">
+                            <label class="formcheckbox">
+                                <input type="checkbox" name="remember" tabindex="0">
+                                <span class="flexi"><i class="checkplace"><img
+                                            src="https://addmorescripts.github.io/hystModal/img/check.svg"
+                                            alt=""></i>记住密码</span>
+                            </label>
+                        </div>
+                        <div class="formsubmit">
+                            <button type="submit" id="login"  onclick="login()">登录</button>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Main Wrap End-->
+    <div class="dark-mark"></div>
+    <!-- Vendor JS-->
+
+    <script>
+        function login() {
+            var username=$('#username').val();
+            var password=$('#password').val();
+            var post_data={'username':username,'password':password};
+            $.ajax(
+                {
+                    type:'post',
+                    contentType:'application/json',
+                    dataType:'json',
+                    data:JSON.stringify(post_data),
+                    url:'http://127.0.0.1:8000/users/login_check',
+                    success:function (result) {
+                        if(result['code']===200)
+                        {
+                            swal({
+                                title:'登陆成功',
+                                icon:'success',
+                            });
+                            setTimeout(function () {
+                                window.location.href='http://127.0.0.1:8000/users/life'
+                            },2000);
+                        }
+                        else
+                        {
+                            alert(result.error)
+                        }
+            }
+                }
+            )
+        }
+    </script>
+    
+    <script src="{% static 'login/hystmodal.min.js' %}"></script>
+
+    <script>
+        const myModal = new HystModal({
+            catchFocus: true,
+            closeOnEsc: true,
+            backscroll: true,
+            beforeOpen: function (modal) {
+                console.log('Message before opening the modal');
+                console.log(modal);
+            },
+            afterClose: function (modal) {
+                console.log('Message after modal has closed');
+                console.log(modal);
+                let videoframe = modal.openedWindow.querySelector('iframe');
+                if (videoframe) {
+                    videoframe.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*');
+                }
+            },
+        });
+    </script>
+
+    <script src="https://cdn.bootcss.com/sweetalert/1.1.3/sweetalert.min.js"></script>
+    <script src="{% static 'js/vendor/modernizr-3.5.0.min.js' %}"></script>
+    <script src="{% static 'js/vendor/popper.min.js' %}"></script>
+    <script src="{% static 'js/vendor/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/vendor/jquery.slicknav.js' %}"></script>
+    <script src="{% static 'js/vendor/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/vendor/slick.min.js' %}"></script>
+    <script src="{% static 'js/vendor/wow.min.js' %}"></script>
+    <script src="{% static 'js/vendor/animated.headline.js' %}"></script>
+    <script src="{% static 'js/vendor/jquery.magnific-popup.js' %}"></script>
+    <script src="{% static 'js/vendor/jquery.ticker.js' %}"></script>
+    <script src="{% static 'js/vendor/jquery.vticker-min.js' %}"></script>
+    <script src="{% static 'js/vendor/jquery.scrollUp.min.js' %}"></script>
+    <script src="{% static 'js/vendor/jquery.nice-select.min.js' %}"></script>
+    <script src="{% static 'js/vendor/jquery.sticky.js' %}"></script>
+    <script src="{% static 'js/vendor/perfect-scrollbar.js' %}"></script>
+    <script src="{% static 'js/vendor/waypoints.min.js' %}"></script>
+    <script src="{% static 'js/vendor/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'js/vendor/jquery.theia.sticky.js' %}"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <!-- UltraNews JS -->
+    <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+</html>
